@@ -1,0 +1,11 @@
+.scroll-fade-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.scroll-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

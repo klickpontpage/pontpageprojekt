@@ -1,0 +1,217 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: white;
+  font-family: orbitron, sans-serif;
+  position: relative; /* ✅ kell az abszolút központosításhoz */
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 110px;
+  margin-right: 60px;
+  z-index: 1;
+}
+
+.logo-text {
+  font-size: 34px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* ===== NAV – DESKTOP: TÖKÉLETES KÖZÉP ===== */
+.nav-menu {
+  display: flex;
+  gap: 40px;
+  border: 1px solid rgb(111, 107, 112);
+  border-radius: 15px;
+  background-color: rgba(151, 144, 151, 0.11);
+  width: 45em;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
+  transition: 0.5s;
+
+  /* ✅ ÚJ: abszolút középre igazítás a headeren belül */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  /* vízszint + függőleges közép */
+  z-index: 2; /* hogy a háttér felett legyen – állítható */
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 6px 20px;
+}
+
+.nav-menu a:hover {
+  color: #9461c2;
+  text-shadow: 0 0 8px #9c7ff0, 0 0 16px #b993ff;
+}
+
+.continue-button {
+  position:relative;
+  margin-right: 40px;
+  padding: 6px 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: orbitron, sans-serif;
+  z-index: 1;
+}
+
+.continue-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.arrow { margin-left: 8px; }
+.continue-link { text-decoration: none; color: white; }
+
+/* 🔻 Hamburger (csak mobilon) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 11;
+}
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translateY(8px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translateY(-8px); }
+
+.lang-btn {
+  padding: 8px 12px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 36px;          
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+
+.lang-desktop { display: inline-flex; align-items: center; margin-left: 12px; }
+.lang-mobile  { display: none; }
+
+@media (max-width: 1400px) {
+  .nav-menu {
+    width: 50%;
+    padding: 0 20px;
+    gap: 20px;
+    justify-content: center;
+  }
+  .nav-menu a {
+    padding: 6px 15px;
+    font-size: 14px;
+  }
+  .logo-container { margin-left: 20px; }
+  .continue-button { margin-right: 20px; }
+
+  .lang-btn { margin-right: -30px;
+    padding: 8px 10px;
+    font-size: 10px;}
+    .continue-button { font-size: 12px; padding: 6px 12px; }
+}
+
+
+
+
+
+
+
+@media (max-width: 868px) {
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;      
+    left: 0;
+    width: 100vw;
+    padding: 1rem 0;
+    background: linear-gradient(180deg, rgba(24, 20, 28, 0.96) 0%, rgba(32, 27, 42, 0.98) 100%);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    height: auto;
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    
+    transform: none;
+  }
+  .nav-menu.active { display: flex; }
+
+  .continue-button { display: none; }
+  .hamburger { 
+    display: flex; 
+    
+  }
+
+  .logo-container { margin-left: -20px;
+   }
+
+  .logo-image {
+    height: 90px;
+    z-index: 1;
+    padding-right: 150px;
+    
+  }
+
+  
+  .lang-desktop { display: none; }
+  .nav-menu .lang-mobile { 
+    display: inline-flex;
+    margin: 8px auto 0;         /* <<< középre */
+    justify-content: center;
+    align-items: center;
+
+  }
+  .right-side { margin-left: -50px; }
+
+
+
+
+}
+
+
+@keyframes slideDownFade {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.slide-down { animation: slideDownFade 1.5s ease-out forwards; }

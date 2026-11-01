@@ -1,0 +1,30 @@
+/* Sötét lila, nagyon egyszerű, sablonos stílusok az adatvédelem oldalhoz */
+
+.legal-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #0a081f; /* sötét lila */
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px;
+  box-sizing: border-box;
+}
+
+.legal-card {
+  max-width: 880px;
+  width: 100%;
+  text-align: center;
+}
+
+.legal-title {
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.legal-content {
+  font-size: clamp(18px, 2.4vw, 28px);
+  line-height: 1.6;
+  margin-top: 28px;
+}

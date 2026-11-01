@@ -1,0 +1,310 @@
+
+:root{
+  --grad-top:   #0a081f;           /* felső (opaque) */
+  --grad-mid:   rgba(10, 8, 31, 0.788); /* közép (átlátszóbb) */
+  --grad-bottom:#06080d;           /* alsó (opaque) */
+}
+
+.pricing-section {
+  position: relative;
+  padding: 4rem 2rem;
+  
+  background-image: linear-gradient(
+    to bottom,
+    var(--grad-top) 0%,
+    var(--grad-top) 20%,
+    var(--grad-mid) 50%,
+    var(--grad-bottom) 80%,
+    var(--grad-bottom) 100%
+  );
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  height: 90vh;
+}
+
+.pricing-title {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #ffffff, #8f74bd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+.pricing-description {
+  color: #d4d1d6;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cardprice {
+  border-radius: 20px;
+  color: white;
+  padding: 2rem;
+  width: 270px;
+  height: 390px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cardprice-title {
+  font-size: 1.1rem;
+  letter-spacing: 1.7px;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+
+
+.cardprice.outer-card {
+  background: linear-gradient(43deg, rgba(37, 15, 114, 0.459) 0%, #50136377 46%, rgba(25, 8, 71, 0.493) 100%);
+    position: relative;
+    bottom: -60px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.cardprice.inner-card {
+  background: linear-gradient(43deg, rgba(69, 28, 218, 0.459) 0%, #8127bd77 46%, rgba(73, 24, 209, 0.493) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.cardprice:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.158);
+}
+
+.price {
+  color: #e9b3f7;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+}
+
+.cardprice ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.cardprice li {
+    margin-top: 10px;
+  
+}
+
+.cardprice button {
+  background: #99999950;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.747);
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 50px;
+}
+.cardprice button:hover {
+  background: #ffffff56;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.747);
+}
+
+/* Háttér gömbök */
+.ball {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.ball-top-nagy {
+  top: -230px;
+  left: -160px;
+  width: 600px;
+  filter: brightness(1.9);
+}
+
+.ball-top-right {
+  top: -240px;
+  right: -100px;
+  width: 300px;
+  filter: blur(1px);
+}
+
+.ball-bottom-kicsi {
+  bottom: -650px;
+  left: 180px;
+  width: 170px;
+  filter: blur(2px);
+}
+
+.ball-bottom-kozep {
+  bottom: -400px;
+  right: 250px;
+  width: 400px;
+  filter: brightness(1.2);
+  
+}
+
+.icon{
+    color: #34ff02;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.scrollText {
+  animation: scrollTextAnimation both;
+  animation-timeline: view(60% 1%);
+
+}
+@keyframes scrollTextAnimation {
+  from {
+    transform: translateY(200px) scale(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+@media (max-width: 1440px) {
+  .pricing-section {
+    padding: 6rem 2rem;
+    height: auto;
+  }
+
+   .pricing-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pricing-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .pricing-cards {
+    gap: 1.5rem;
+  }
+
+  .cardprice {
+    width: 160px;
+    height: 370px;
+    padding: 1.5rem;
+  }
+
+
+  .price {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .cardprice button {
+    margin-top: 30px;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .cardprice-title {
+    font-size: 0.8rem;
+  }
+
+  .cardprice li {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ...az általad küldött alap CSS marad! */
+
+/* ➕ Reszponzív javítások */
+@media (min-width: 2060px){
+  .pricing-cards{
+    margin-top: 20vh;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 2rem 2rem;
+    height: auto; 
+  }
+
+  .pricing-title {
+    font-size: 2rem;
+  }
+
+  .pricing-description {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardprice {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .cardprice-title {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .cardprice button {
+    margin-top: 1rem;
+  }
+
+  .cardprice.outer-card {
+    position: static;
+    bottom: unset;
+  }
+
+  /* Háttér gömbök mobilon */
+  .ball {
+    display: none;
+  }
+}
+
+
+  
+
+
+

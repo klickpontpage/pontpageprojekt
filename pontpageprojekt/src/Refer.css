@@ -1,0 +1,142 @@
+.portfolio-section {
+  padding: 3rem 2rem;
+  background-color: #0a081f;
+  color: white;
+  text-align: center;
+}
+
+.cta-button {
+  background-color: #ffffff2a;
+  width: 150px;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  margin: 1rem 0 2rem 0;
+  cursor: pointer;
+   border: 1px solid rgb(209, 197, 221);
+}
+.cta-button:hover {
+  background-color: #ffffff54;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.747);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  justify-items: center;
+}
+
+.portfolio-item {
+  max-width: 700px;
+  text-align: left;
+}
+
+.portfolio-item video {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(216, 211, 211, 0.3);
+}
+.maintitleref {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; 
+  text-align: center;
+  margin-top: -40px;
+  gap: 20px;
+  
+}
+
+
+.eleje {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #ffffff, #8e79c0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+   
+}
+.vege {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #8f74bd, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tech-tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  
+}
+
+.tech-tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #e0dddd36;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.85rem;
+  box-shadow: 0 0 5px rgba(205, 202, 212, 0.692);
+  border: 1px solid #a3a2a2;
+  
+}
+
+.tech-tag:hover {
+  background: #f0f0f073;
+}
+
+
+.scrollText {
+  animation: scrollTextAnimation both;
+  animation-timeline: view(60% 1%);
+
+}
+@keyframes scrollTextAnimation {
+  from {
+    transform: translateY(200px) scale(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Egy videó oszloponként */
+  }
+
+  .portfolio-item {
+    max-width: 100%;
+  }
+
+  .eleje, .vege {
+    font-size: 1.6em; /* Kisebb cím mobilon */
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+}

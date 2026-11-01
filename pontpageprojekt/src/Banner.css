@@ -1,0 +1,733 @@
+.banner {
+  position: relative;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.banner-content {
+  text-align: center;
+}
+
+.main-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 335px; 
+  flex-wrap: wrap; 
+  text-align: center;
+  margin-top: -40px;
+  
+}
+
+
+.page {
+  font-size: clamp(3.5rem, 12vw + 1rem, 8rem);
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #ffffff, #8e79c0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+   
+}
+.pont {
+  font-size: clamp(3.5rem, 12vw + 1rem, 8rem);
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #8f74bd, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.subtitle-container {
+   
+  white-space: pre-line; /* <-- a \n sortörést tényleg törésként fogja értelmezni */
+  text-align: center;
+  color: #d4d1d6;
+  font-size: clamp(14px, 2.5vw, 18px);
+  font-weight: 200;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 700px;
+  margin: 0 auto;
+}
+  
+
+
+
+
+.subtitle {
+  align-items: center;
+  text-align: center;
+  color: #d4d1d6;
+   font-size: clamp(12px, 2vw, 16px);
+  font-weight: 200;
+  padding-top: 80px;
+  font-family: montserrat, sans-serif;
+}
+
+
+
+
+
+
+/* Social bar */
+.social-bar {
+  position: absolute;
+  left: 50px;
+  top: 35%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* From Uiverse.io by MijailVillegas */
+.card {
+  max-width: fit-content;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
+  transition: 0.5s;
+  
+}
+
+.card:hover {
+  animation: ease-out 5s;
+  background: rgba(173, 173, 173, 0.05);
+}
+
+.card ul {
+  padding: 1rem;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.card ul li {
+  cursor: pointer;
+}
+
+.svgsocial {
+  transition: all 0.3s;
+  /* if you find some problems change w - h : 30px*/
+  padding: 1rem;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  color: #834ec4;
+  fill: currentColor;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.textsocial {
+  opacity: 0;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.3s;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  z-index: 9999;
+  box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),
+    -10px 0 1px rgba(153, 153, 153, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.082);
+}
+
+/*isometric prooyection*/
+.iso-pro {
+  transition: 0.5s;
+}
+.iso-pro:hover a > .svgsocial {
+  transform: translate(15px, -15px);
+  border-radius: 100%;
+}
+
+.iso-pro:hover .textsocial {
+  opacity: 1;
+  transform: translate(25px, -2px) skew(-5deg);
+}
+
+.iso-pro:hover .svgsocial {
+  transform: translate(5px, -5px);
+}
+
+.iso-pro span {
+  opacity: 0;
+  position: absolute;
+  color: #1877f2;
+  border-color: #1877f2;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+  border-radius: 50%;
+  transition: all 0.3s;
+  height: 60px;
+  width: 60px;
+}
+
+.iso-pro:hover span {
+  opacity: 1;
+}
+
+.iso-pro:hover span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.iso-pro:hover span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+
+.iso-pro:hover span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+
+
+
+
+
+/* From Uiverse.io by Ashon-G */ 
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.uiverse {
+  --duration: 7s;
+  --easing: linear;
+  --c-color-1: rgba(67, 10, 201, 0.7);
+  --c-color-2: #a86ad1;
+  --c-color-3: #921be2;
+  --c-color-4: rgba(79, 34, 121, 0.7);
+  --c-shadow: rgba(255, 255, 255, 0.2);
+  --c-shadow-inset-top: #fcfcfc;
+  --c-shadow-inset-bottom: #ffffff;
+  --c-radial-inner: #481670;
+  --c-radial-outer: #4815a7;
+  --c-color: #ffffff;
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  display: table;
+  border-radius: 24px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: var(--c-color);
+  background: radial-gradient(
+    circle,
+    var(--c-radial-inner),
+    var(--c-radial-outer) 80%
+  );
+  box-shadow: 0 0 14px var(--c-shadow);
+}
+
+.uiverse:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+  box-shadow:
+    inset 0 3px 12px var(--c-shadow-inset-top),
+    inset 0 -3px 4px var(--c-shadow-inset-bottom);
+}
+
+.uiverse .wrapper {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+  overflow: hidden;
+  border-radius: 24px;
+  min-width: 132px;
+  padding: 12px 0;
+}
+
+.uiverse .wrapper span {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.uiverse:hover {
+  --duration: 1400ms;
+}
+
+.uiverse .wrapper .circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  filter: blur(var(--blur, 8px));
+  background: var(--background, transparent);
+  transform: translate(var(--x, 0), var(--y, 0)) translateZ(0);
+  animation: var(--animation, none) var(--duration) var(--easing) infinite;
+}
+
+.uiverse .wrapper .circle.circle-1,
+.uiverse .wrapper .circle.circle-9,
+.uiverse .wrapper .circle.circle-10 {
+  --background: var(--c-color-4);
+}
+
+.uiverse .wrapper .circle.circle-3,
+.uiverse .wrapper .circle.circle-4 {
+  --background: var(--c-color-2);
+  --blur: 14px;
+}
+
+.uiverse .wrapper .circle.circle-5,
+.uiverse .wrapper .circle.circle-6 {
+  --background: var(--c-color-3);
+  --blur: 16px;
+}
+
+.uiverse .wrapper .circle.circle-2,
+.uiverse .wrapper .circle.circle-7,
+.uiverse .wrapper .circle.circle-8,
+.uiverse .wrapper .circle.circle-11,
+.uiverse .wrapper .circle.circle-12 {
+  --background: var(--c-color-1);
+  --blur: 12px;
+}
+
+.uiverse .wrapper .circle.circle-1 {
+  --x: 0;
+  --y: -40px;
+  --animation: circle-1;
+}
+
+.uiverse .wrapper .circle.circle-2 {
+  --x: 92px;
+  --y: 8px;
+  --animation: circle-2;
+}
+
+.uiverse .wrapper .circle.circle-3 {
+  --x: -12px;
+  --y: -12px;
+  --animation: circle-3;
+}
+
+.uiverse .wrapper .circle.circle-4 {
+  --x: 80px;
+  --y: -12px;
+  --animation: circle-4;
+}
+
+.uiverse .wrapper .circle.circle-5 {
+  --x: 12px;
+  --y: -4px;
+  --animation: circle-5;
+}
+
+.uiverse .wrapper .circle.circle-6 {
+  --x: 56px;
+  --y: 16px;
+  --animation: circle-6;
+}
+
+.uiverse .wrapper .circle.circle-7 {
+  --x: 8px;
+  --y: 28px;
+  --animation: circle-7;
+}
+
+.uiverse .wrapper .circle.circle-8 {
+  --x: 28px;
+  --y: -4px;
+  --animation: circle-8;
+}
+
+.uiverse .wrapper .circle.circle-9 {
+  --x: 20px;
+  --y: -12px;
+  --animation: circle-9;
+}
+
+.uiverse .wrapper .circle.circle-10 {
+  --x: 64px;
+  --y: 16px;
+  --animation: circle-10;
+}
+
+.uiverse .wrapper .circle.circle-11 {
+  --x: 4px;
+  --y: 4px;
+  --animation: circle-11;
+}
+
+.uiverse .wrapper .circle.circle-12 {
+  --blur: 14px;
+  --x: 52px;
+  --y: 4px;
+  --animation: circle-12;
+}
+
+@keyframes circle-1 {
+  33% {
+    transform: translate(0px, 16px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(12px, 64px) translateZ(0);
+  }
+}
+
+@keyframes circle-2 {
+  33% {
+    transform: translate(80px, -10px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(72px, -48px) translateZ(0);
+  }
+}
+
+@keyframes circle-3 {
+  33% {
+    transform: translate(20px, 12px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(12px, 4px) translateZ(0);
+  }
+}
+
+@keyframes circle-4 {
+  33% {
+    transform: translate(76px, -12px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(112px, -8px) translateZ(0);
+  }
+}
+
+@keyframes circle-5 {
+  33% {
+    transform: translate(84px, 28px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(40px, -32px) translateZ(0);
+  }
+}
+
+@keyframes circle-6 {
+  33% {
+    transform: translate(28px, -16px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(76px, -56px) translateZ(0);
+  }
+}
+
+@keyframes circle-7 {
+  33% {
+    transform: translate(8px, 28px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(20px, -60px) translateZ(0);
+  }
+}
+
+@keyframes circle-8 {
+  33% {
+    transform: translate(32px, -4px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(56px, -20px) translateZ(0);
+  }
+}
+
+@keyframes circle-9 {
+  33% {
+    transform: translate(20px, -12px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(80px, -8px) translateZ(0);
+  }
+}
+
+@keyframes circle-10 {
+  33% {
+    transform: translate(68px, 20px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(100px, 28px) translateZ(0);
+  }
+}
+
+@keyframes circle-11 {
+  33% {
+    transform: translate(4px, 4px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(68px, 20px) translateZ(0);
+  }
+}
+
+@keyframes circle-12 {
+  33% {
+    transform: translate(56px, 0px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(60px, -32px) translateZ(0);
+  }
+}
+
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 1.8s ease-out forwards;
+}
+
+@keyframes zoomInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.zoom-in-left {
+  animation: zoomInLeft 1.5s ease-out forwards;
+}
+
+@media (min-width: 2560px){
+   .banner {
+    top: 2rem;
+    height: 100vh;
+   }
+  .main-title{
+    gap: min(22vw, 820px);
+  }
+  .page,
+  .pont { 
+    font-size: 7vw;
+    padding-bottom: 150px;
+  }
+
+
+
+  .subtitle {
+    font-size: 20px;
+    
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .page,
+  .pont {
+    font-size: 7vw;
+    padding-bottom: 100px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    padding: 10px 2rem;
+  }
+
+
+
+  
+}
+
+@media (max-width: 1040px) {
+
+.main-title {
+    gap: 200px;
+    
+  }
+  .page,
+  .pont {
+    font-size: 7vw;
+    padding-bottom: 100px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    padding: 10px 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .banner {
+    top: -6rem;
+    height: 100vh;
+    
+  }
+  .main-title {
+    gap: 20px;
+  }
+
+  .page,
+  .pont {
+    font-size: 7vw;
+    padding-bottom: 230px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    padding: 10px 2rem;
+  }
+
+  .card {
+    margin-top: 180px;
+  }
+
+
+
+
+}
+
+@media (orientation: portrait) and (min-width: 1000px) and (max-width: 1100px) and (min-height: 1200px) {
+  .banner {
+    top: -7rem;
+    height: 100vh;
+    padding: 0 0rem;
+  }
+  .main-title {
+    gap: 10px;
+    
+  }
+
+  .page,
+  .pont {
+    font-size: 2.5em;
+    padding-bottom: 400px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    padding: 10px 2rem;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .banner {
+    top: -8rem;
+    height: 100vh;
+    padding: 1rem 0rem;
+  }
+  .main-title {
+    gap: 5px;
+    
+  }
+
+  .page,
+  .pont {
+    font-size: 10vw;
+    padding-bottom: 250px;
+  }
+
+ .subtitle-container {
+    margin: 0 auto;
+  }
+
+  .subtitle {
+    font-size: 9px;
+    padding: 20px 0.0rem;
+    
+  }
+
+  .social-bar {
+    left: 10px;
+    top: 28%;
+    transform: translateY(0);
+    scale: 0.8;
+  }
+
+  .banner-content {
+    padding: 0 1rem;
+  }
+
+  .button-container {
+    margin-top: -10px;
+    scale: 0.9;
+  }
+
+  .card {
+    margin-top: 30px;
+    padding: 0.1rem;
+    gap: 0.5rem;
+  }
+  .card ul {
+    padding: 0.3rem;
+  }
+  .card ul li {
+    font-size: 0.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
