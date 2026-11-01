@@ -1,5 +1,5 @@
 import React from 'react';
-import './work.css';
+import './Work.css';
 import bgBall from './img/ball.png'; 
 import { Parallax } from 'react-scroll-parallax';
 import ScrollZoomMotion from './ScrollZoomMotion.jsx'; 
