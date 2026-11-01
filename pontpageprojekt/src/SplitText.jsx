@@ -5,7 +5,7 @@ const SplitText = ({
   text,
   className = '',
   speed = 'normal',
-  variant = 'white', // vagy: 'gradient'
+  variant = 'white', 
 }) => {
   const delayStep = speed === 'fast' ? 0.015 : speed === 'slow' ? 0.1 : 0.05;
 
