@@ -10,21 +10,21 @@ const Preloader = ({ readyToHide, onFinish }) => {
   const [startSplit, setStartSplit] = useState(false);
   const [exit, setExit] = useState(false);
 
-  // Ha a videó (vagy más asset) készen áll, akkor indítjuk az animációt és a kifutást
+  
   useEffect(() => {
     if (!readyToHide) return;
 
-    // függöny nyitás indul
+    
     setStartSplit(true);
 
-    // egy kis idő, amíg a split animáció lefut
+    
     const splitTimer = setTimeout(() => {
-      setExit(true); // kifutás / eltűnés
-    }, 1000); // ennyi ideig tartson a "split"
+      setExit(true); 
+    }, 1000); 
 
     const finishTimer = setTimeout(() => {
-      onFinish(); // végleg eltüntetjük a preloader komponenst
-    }, 1800); // 1000ms split + ~800ms kifutás
+      onFinish(); 
+    }, 1800); 
 
     return () => {
       clearTimeout(splitTimer);

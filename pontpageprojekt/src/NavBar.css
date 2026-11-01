@@ -6,7 +6,7 @@
   background-color: transparent;
   color: white;
   font-family: orbitron, sans-serif;
-  position: relative; /* ✅ kell az abszolút központosításhoz */
+  position: relative; 
   z-index: 10;
 }
 
@@ -27,7 +27,7 @@
   z-index: 1;
 }
 
-/* ===== NAV – DESKTOP: TÖKÉLETES KÖZÉP ===== */
+
 .nav-menu {
   display: flex;
   gap: 40px;
@@ -43,12 +43,12 @@
     inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
   transition: 0.5s;
 
-  /* ✅ ÚJ: abszolút középre igazítás a headeren belül */
+  
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);  /* vízszint + függőleges közép */
-  z-index: 2; /* hogy a háttér felett legyen – állítható */
+  transform: translate(-50%, -50%);  
+  z-index: 2; 
 }
 
 .nav-menu a {
@@ -87,7 +87,7 @@
 .arrow { margin-left: 8px; }
 .continue-link { text-decoration: none; color: white; }
 
-/* 🔻 Hamburger (csak mobilon) */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -197,7 +197,7 @@
   .lang-desktop { display: none; }
   .nav-menu .lang-mobile { 
     display: inline-flex;
-    margin: 8px auto 0;         /* <<< középre */
+    margin: 8px auto 0;         
     justify-content: center;
     align-items: center;
 

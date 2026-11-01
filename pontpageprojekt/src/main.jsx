@@ -19,11 +19,11 @@ import Error from "./Error.jsx";
 import Terms from "./Terms.jsx";
 import Data from "./data.jsx";
 
-// fő tartalom – most már kap egy propot, hogy jelezze, ha a videó kész
+
 function HomePage({ onVideoReady }) {
   return (
     <>
-      {/* A háttérvideó már a preloader alatt is tölt */}
+      
       <BackgroundVideo onReady={onVideoReady} />
       <NavBar />
       <Banner />
@@ -40,13 +40,13 @@ function HomePage({ onVideoReady }) {
 }
 
 function App() {
-  // amikor a fontos assetek (pl. videó) betöltöttek
+  
   const [assetsReady, setAssetsReady] = useState(false);
-  // amíg true, a preloader látszik, de a tartalom már mögötte ott van
+  
   const [showPreloader, setShowPreloader] = useState(true);
 
   const handleVideoReady = () => {
-    // BackgroundVideo szól, ha lejátszható / betöltött
+    
     setAssetsReady(true);
   };
 

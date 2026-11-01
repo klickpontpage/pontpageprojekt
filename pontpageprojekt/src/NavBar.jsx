@@ -20,7 +20,7 @@ const NavBar = () => {
 
   return (
     <header className="header">
-      {/* BAL: LOGÓ */}
+      {/* LOGO */}
       <div className="logo-container"  style={{ cursor: "pointer" }}>
         <motion.img
           src={logo}
@@ -33,14 +33,14 @@ const NavBar = () => {
         />
       </div>
 
-      {/* KÖZÉP: MENÜ – mindig középen marad */}
+    
       <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
         <a href="#services"  onClick={() => setMenuOpen(false)}>{t("nav.services")}</a>
         <a href="#reference" onClick={() => setMenuOpen(false)}>{t("nav.reference")}</a>
         <a href="#pricing"   onClick={() => setMenuOpen(false)}>{t("nav.pricing")}</a>
         <a href="#contact"   onClick={() => setMenuOpen(false)}>{t("nav.contact")}</a>
 
-        {/* mobilon itt jelenik meg a nyelvváltó */}
+        
         <button
           className="lang-btn lang-mobile"
           onClick={() => { toggleLang(); setMenuOpen(false); }}
@@ -49,7 +49,7 @@ const NavBar = () => {
         </button>
       </nav>
 
-      {/* JOBB: nyelvváltó (desktopon) + Tovább + hamburger (mobilon) */}
+      
       <div className="right-side">
   <button className="lang-btn lang-desktop" onClick={toggleLang}>
     {i18n.language === "hu" ? "HU" : "EN"}

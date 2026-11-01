@@ -47,7 +47,7 @@
 
 .subtitle-container {
    
-  white-space: pre-line; /* <-- a \n sortörést tényleg törésként fogja értelmezni */
+  white-space: pre-line; 
   text-align: center;
   color: #d4d1d6;
   font-size: clamp(14px, 2.5vw, 18px);
@@ -89,7 +89,7 @@
   gap: 20px;
 }
 
-/* From Uiverse.io by MijailVillegas */
+
 .card {
   max-width: fit-content;
   border-radius: 25px;
@@ -128,7 +128,7 @@
 
 .svgsocial {
   transition: all 0.3s;
-  /* if you find some problems change w - h : 30px*/
+  
   padding: 1rem;
   height: 20px;
   width: 20px;
@@ -154,7 +154,7 @@
     inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.082);
 }
 
-/*isometric prooyection*/
+
 .iso-pro {
   transition: 0.5s;
 }
@@ -207,7 +207,7 @@
 
 
 
-/* From Uiverse.io by Ashon-G */ 
+ 
 .button-container {
   display: flex;
   align-items: center;

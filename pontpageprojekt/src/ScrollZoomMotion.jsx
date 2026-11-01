@@ -10,7 +10,7 @@ const ScrollZoomMotion = ({ children, className = '' }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setHasAppeared(true);
-          observer.disconnect(); // 🔥 csak egyszer figyel → fixen ott marad!
+          observer.disconnect(); 
         }
       },
       {

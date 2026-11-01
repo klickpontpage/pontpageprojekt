@@ -20,7 +20,7 @@
   }
 }
 
-/* ✨ Átmenetes szöveg */
+
 .gradient-text {
   background: linear-gradient(90deg, #ffffff, #8e79c0);
   -webkit-background-clip: text;
@@ -28,7 +28,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* ⚪ Fehér szöveg */
+
 .white-text {
   color: white;
 }

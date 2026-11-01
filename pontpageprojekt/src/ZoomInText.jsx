@@ -9,8 +9,8 @@ const ZoomInText = ({ children, className = '' }) => {
       animate={{ scale: 1, opacity: 1 }}
         viewport={{ once: true, amount: 0.6 }}
       transition={{
-        duration: 2,              // ⏳ lassabb animáció
-        ease: [0.25, 0.1, 0.25, 1], // 🎯 "easeInOut" jelleg – nagyon smooth
+        duration: 2,              
+        ease: [0.25, 0.1, 0.25, 1], 
       }}
     >
       {children}

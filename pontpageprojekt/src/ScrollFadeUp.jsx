@@ -10,7 +10,7 @@ const ScrollFadeUp = ({ children, className = '' }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect(); // csak egyszer aktiválódik
+          observer.disconnect(); 
         }
       },
       { threshold: 0.1 }

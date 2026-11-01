@@ -11,7 +11,7 @@ function BackgroundVideo({ onReady }) {
     const timer = setTimeout(() => {
       if (videoRef.current) {
         videoRef.current.play().catch(() => {
-          // ha a böngésző nem engedi (pl. mobilon autoplay tiltás)
+          
           setError(true);
         });
       }
@@ -21,22 +21,21 @@ function BackgroundVideo({ onReady }) {
   }, []);
 
   const handleCanPlayThrough = () => {
-    // itt biztosan van annyi buffer, hogy normálisan fusson
+    
     if (onReady) {
       onReady();
     }
   };
 
   const handleLoadedData = () => {
-    // ha szeretnéd hamarabb “ready”-nek tekinteni, itt is hívhatod:
-    // onReady && onReady();
+    
   };
 
   const handleError = () => {
     setError(true);
-    // akár itt is jelezhetsz a parentnek, hogy fallbackre váltottál
+    
     if (onReady) {
-      onReady(); // így nem ragad bent a preloader, ha a videó sose tölt be
+      onReady(); 
     }
   };
 

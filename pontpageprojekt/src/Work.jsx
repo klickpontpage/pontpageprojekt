@@ -77,7 +77,7 @@ const Work = () => {
       </div>
       </ScrollFadeUp>
 
-      {/* Alsó rész – folyamatosan mozgó díjsáv */}
+      {/* Alsó rész */}
       <div className="scroller-wrapper">
         <div className="scroller-track">
           {[...awards, ...awards].map((item, index) => (
