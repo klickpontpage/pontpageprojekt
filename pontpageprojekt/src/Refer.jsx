@@ -3,7 +3,7 @@ import './Refer.css';
 import szentref from './img/szentkiralyrefsm.mp4';
 import diorref from './img/diorrefi.mp4';
 import goshenref from './img/goshenref2.0sm.mp4';
-import gyudiref from './img/gyudirefsm.mp4';
+import gyudiref from './img/Gyudirefsm.mp4';
 import eurocorn from './img/eurocornrefsm.mp4';
 import elevenpilates from './img/elevenpilrefsm.mp4';
 import kertiko from './img/kertikoref.mp4'
